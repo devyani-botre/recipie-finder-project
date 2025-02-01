@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick & Easy Recipes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap">
+    <style>
+        img {
+            border-radius: 6%;
+            height: 150px;
+            width: 200px;
+        }
+        body {
+            background-color: rgb(245, 235, 220);
+            background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);
+            font-family: 'Open Sans', sans-serif;
+        }
+        h5 {
+            color: rgb(165, 23, 89);
+            font-size: 30px;
+            font-family: 'Lobster', cursive;
+        }
+        h1 {
+            color: rgb(204, 116, 34);
+            text-align: center;
+            font-family: 'Lobster', cursive;
+        }
+        .icon-button {
+            cursor: pointer;
+            color: blue;
+            border: none;
+            background: none;
+            padding: 0 10px;
+        }
+        .comment-section {
+            display: none;
+            margin-top: 10px;
+        }
+        .comment-options {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row"><h1>Explore Quick & Easy Recipes</h1></div><br><hr>
+
+        <!-- Recipe: 15-Minute Pasta -->
+        <div class="row">
+            <div class="col-md-8">
+                <p><strong>Ingredients:</strong> 200g pasta (spaghetti or penne), 2 tbsp olive oil, 3 garlic cloves (minced), 1 cup cherry tomatoes (halved), fresh basil leaves, salt, pepper, and grated Parmesan cheese.</p>
+                <p><strong>Procedure:</strong>
+                    <ol>
+                        <li>Cook the pasta according to package instructions.</li>
+                        <li>In a pan, heat olive oil and sauté garlic until fragrant.</li>
+                        <li>Add cherry tomatoes and cook until softened.</li>
+                        <li>Toss the cooked pasta into the pan and mix well.</li>
+                        <li>Season with salt, pepper, and fresh basil leaves.</li>
+                        <li>Top with grated Parmesan cheese and serve hot.</li>
+                    </ol>
+                    <a href="https://youtu.be/u3vuq3zaR20" class="btn btn-primary btn-sm">Watch On YouTube</a>
+                </p>
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('recipe1')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareRecipe('recipe1')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+            <div class="col-md-3">
+                <img src="pasta15.jpg" alt="15-Minute Pasta">
+                <h5>15-Minute Pasta</h5>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Recipe: Quick Stir-Fry -->
+        <div class="row">
+            <div class="col-md-3">
+                <img src="stirfry.jpg" alt="Quick Stir-Fry">
+                <h5>Quick Stir-Fry</h5>
+            </div>
+            <div class="col-md-8">
+                <p><strong>Ingredients:</strong> 2 cups mixed vegetables (carrots, broccoli, bell peppers), 1 tbsp soy sauce, 1 tbsp oyster sauce, 1 tbsp sesame oil, 1 garlic clove (minced), and 1 tbsp cornstarch (dissolved in water).</p>
+                <p><strong>Procedure:</strong>
+                    <ol>
+                        <li>Heat sesame oil in a pan and sauté garlic until golden.</li>
+                        <li>Add mixed vegetables and stir-fry for 5 minutes.</li>
+                        <li>Pour in soy sauce, oyster sauce, and cornstarch mixture.</li>
+                        <li>Stir until the sauce thickens and coats the vegetables evenly.</li>
+                        <li>Serve with steamed rice or noodles.</li>
+                    </ol>
+                    <a href="https://youtu.be/CFC82ec9ft4" class="btn btn-primary btn-sm">Watch On YouTube</a>
+                </p>
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like2')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like2">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options2')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('recipe2')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareRecipe('recipe2')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div id="comment-options2" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section2')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments2')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section2" class="comment-section">
+                    <textarea class="form-control" id="comment2" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment2', 'comments2')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments2"></div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Recipe: Speedy Tacos -->
+        <div class="row">
+            <div class="col-md-8">
+                <p><strong>Ingredients:</strong> 6 small tortillas, 1 cup cooked ground beef or chicken, 1 cup shredded lettuce, 1/2 cup diced tomatoes, 1/2 cup shredded cheese, salsa, and sour cream.</p>
+                <p><strong>Procedure:</strong>
+                    <ol>
+                        <li>Heat tortillas in a pan or microwave.</li>
+                        <li>Fill each tortilla with ground beef or chicken.</li>
+                        <li>Add lettuce, tomatoes, and shredded cheese.</li>
+                        <li>Top with salsa and sour cream.</li>
+                        <li>Serve immediately and enjoy!</li>
+                    </ol>
+                    <a href="https://youtu.be/YT8oN4U7Vm8" class="btn btn-primary btn-sm">Watch On YouTube</a>
+                </p>
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like3')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like3">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options3')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('recipe3')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareRecipe('recipe3')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div id="comment-options3" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section3')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments3')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section3" class="comment-section">
+                    <textarea class="form-control" id="comment3" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment3', 'comments3')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments3"></div>
+            </div>
+            <div class="col-md-3">
+                <img src="tacos2.jpg" alt="Speedy Tacos">
+                <h5>Speedy Tacos</h5>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function increaseLike(likeId) {
+            const likeElement = document.getElementById(likeId);
+            let likeCount = parseInt(likeElement.innerText);
+            likeElement.innerText = likeCount + 1;
+        }
+
+        function toggleCommentOptions(optionsId) {
+            const options = document.getElementById(optionsId);
+            options.style.display = options.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleCommentSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleComments(commentsId) {
+            const comments = document.getElementById(commentsId);
+            comments.style.display = comments.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function addComment(commentId, commentsContainerId) {
+            const commentText = document.getElementById(commentId).value;
+            if (commentText.trim() === "") return;
+
+            const commentsContainer = document.getElementById(commentsContainerId);
+            const newComment = document.createElement('p');
+            newComment.textContent = commentText;
+            commentsContainer.appendChild(newComment);
+
+            document.getElementById(commentId).value = "";
+        }
+</script>
+</body></html>

@@ -1,0 +1,34 @@
+body {
+    background-color: #f8f9fa;
+}
+
+/* Ensure all cards have the same height */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    height: auto; /* Adjust card height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure all images inside the card are smaller */
+.card-img-top {
+    width: 100%;        /* Stretch image to fit the card width */
+    height: 150px;      /* Smaller fixed height for all images */
+    object-fit: cover;  /* Ensures the image fits properly without stretching */
+    object-position: center; /* Centers the image */
+}
+
+/* Make sure the card body expands properly */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;  /* Reduce padding inside the card body */
+}
+
+/* Ensure the "Watch on YouTube" button sticks to the bottom */
+.btn-danger {
+    margin-top: auto;
+    padding: 0.5rem 1rem; /* Adjust button padding */
+}

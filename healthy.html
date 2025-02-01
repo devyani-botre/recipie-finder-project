@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Recipes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap">
+   <style>
+        img {
+            border-radius: 6%;
+            height: 150px;
+            width: 200px;
+        }
+        body {
+            background-color: rgb(245, 235, 220);
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+        }
+        h5 {
+            color: rgb(165, 23, 89);
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1 {
+            color: rgb(204, 116, 34);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row"><h1>Explore Healthy Recipes</h1></div><br><hr>
+
+        <!-- Recipe: Vegan Power Bowl -->
+        <div class="row">
+            <div class="col-md-8">
+                <p><strong>Ingredients:</strong> Quinoa, chickpeas, kale, sweet potatoes, avocado, tahini dressing.</p>
+                <p><strong>Procedure:</strong>
+                    <ol>
+                        <li>Cook quinoa according to package instructions.</li>
+                        <li>Roast sweet potatoes and chickpeas with olive oil and spices.</li>
+                        <li>Assemble the bowl with quinoa, kale, sweet potatoes, chickpeas, and sliced avocado.</li>
+                        <li>Drizzle with tahini dressing and serve.</li>
+                    </ol>
+                    <a href="https://youtu.be/recipe4-link" class="btn btn-primary btn-sm">Watch On YouTube</a>
+                </p>
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like2')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like2">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options2')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('recipe2')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareRecipe('recipe2')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div id="comment-options2" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section2')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments2')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section2" class="comment-section">
+                    <textarea class="form-control" id="comment2" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment2', 'comments2')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments2"></div>
+            </div>
+            <div class="col-md-3">
+                <img src="vegan-bowl.jpg" alt="Vegan Power Bowl">
+                <h5>Vegan Power Bowl</h5>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Recipe: Low-Carb Delight -->
+        <div class="row">
+            <div class="col-md-3">
+                <img src="low-carb.jpg" alt="Low-Carb Delight">
+                <h5>Low-Carb Delight</h5>
+            </div>
+            <div class="col-md-8">
+                <p><strong>Ingredients:</strong> Zucchini noodles, cherry tomatoes, garlic, olive oil, and Parmesan cheese.</p>
+                <p><strong>Procedure:</strong>
+                    <ol>
+                        <li>Spiralize zucchini to make zucchini noodles.</li>
+                        <li>Sauté minced garlic in olive oil and add cherry tomatoes.</li>
+                        <li>Add zucchini noodles and toss until coated.</li>
+                        <li>Top with Parmesan cheese and serve warm.</li>
+                    </ol>
+                    <a href="https://youtu.be/recipe5-link" class="btn btn-primary btn-sm">Watch On YouTube</a>
+                </p>
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like2')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like2">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options2')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('recipe2')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareRecipe('recipe2')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div id="comment-options2" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section2')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments2')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section2" class="comment-section">
+                    <textarea class="form-control" id="comment2" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment2', 'comments2')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments2"></div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Recipe: Gluten-Free Pancakes -->
+        <div class="row">
+            <div class="col-md-8">
+                <p><strong>Ingredients:</strong> Gluten-free flour, almond milk, eggs, honey, and baking powder.</p>
+                <p><strong>Procedure:</strong>
+                    <ol>
+                        <li>In a bowl, mix gluten-free flour, baking powder, almond milk, eggs, and honey to form a smooth batter.</li>
+                        <li>Heat a non-stick pan and pour a ladleful of batter onto the pan.</li>
+                        <li>Cook until bubbles form, then flip and cook the other side.</li>
+                        <li>Serve with fresh fruit and maple syrup.</li>
+                    </ol>
+                    <a href="https://youtu.be/recipe6-link" class="btn btn-primary btn-sm">Watch On YouTube</a>
+                </p>
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like2')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like2">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options2')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('recipe2')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareRecipe('recipe2')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div id="comment-options2" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section2')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments2')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section2" class="comment-section">
+                    <textarea class="form-control" id="comment2" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment2', 'comments2')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments2"></div>
+            </div>
+            <div class="col-md-3">
+                <img src="gluten-free.jpg" alt="Gluten-Free Pancakes">
+                <h5>Gluten-Free Pancakes</h5>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function increaseLike(likeId) {
+            const likeElement = document.getElementById(likeId);
+            let likeCount = parseInt(likeElement.innerText);
+            likeElement.innerText = likeCount + 1;
+        }
+
+        function toggleCommentOptions(optionsId) {
+            const options = document.getElementById(optionsId);
+            options.style.display = options.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleCommentSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleComments(commentsId) {
+            const comments = document.getElementById(commentsId);
+            comments.style.display = comments.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function addComment(commentId, commentsContainerId) {
+            const commentText = document.getElementById(commentId).value;
+            if (commentText.trim() === "") return;
+
+            const commentsContainer = document.getElementById(commentsContainerId);
+            const newComment = document.createElement('p');
+            newComment.textContent = commentText;
+            commentsContainer.appendChild(newComment);
+
+            document.getElementById(commentId).value = "";
+        }
+</script>
+
+
+</body>
+</html>

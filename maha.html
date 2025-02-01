@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharashtrian Dishes</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap">
+    
+    <style>
+        img {
+            border-radius: 6%;
+            height: 150px;
+            width: 200px;
+        }
+        body {
+            background-color: rgb(245, 235, 220);
+            background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);
+            font-family: 'Open Sans', sans-serif;
+        }
+        h5 {
+            color: rgb(165, 23, 89);
+            font-size: 30px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1 {
+            color: rgb(204, 116, 34);
+            text-align: center;
+            font-family:Georgia, 'Times New Roman', Times, serif
+        }
+        .icon-button {
+            cursor: pointer;
+            color: blue;
+            border: none;
+            background: none;
+            padding: 5px 10px;
+            font-size: 18px;
+        }
+        .icon-button:hover {
+            color: darkblue;
+        }
+        .comment-section {
+            display: none;
+            margin-top: 10px;
+        }
+        .comment-options {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row"><h1>Explore Indian Cuisine</h1></div><br><hr>
+
+        <!-- Puran Poli -->
+        <div class="row">
+            <div class="col-md-8">
+                <p><strong>Ingredients:</strong> Chana dal, jaggery, cardamom powder, nutmeg, wheat flour, oil/ghee, salt.</p>
+                <p><strong>Procedure:</strong>
+                    <ol>
+                        <li>Cook chana dal until soft, then drain and mash.</li>
+                        <li>Mix dal with jaggery, cook until thick. Add cardamom and nutmeg powder.</li>
+                        <li>Prepare dough with wheat flour, water, oil, and salt. Let it rest.</li>
+                        <li>Roll out dough, stuff with the dal mixture, and roll again into flat discs.</li>
+                        <li>Cook on a hot tawa with ghee until golden on both sides.</li>
+                    </ol>
+                    <a href="https://youtu.be/zZ_jUpD2gR0" class="btn btn-danger btn-sm">
+                        <i class="fas fa-video"></i> Watch On YouTube
+                    </a>
+                </p>
+                
+                <!-- Like, Comment, Download, Share Buttons -->
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('Puran Poli', 'Ingredients: Chana dal, jaggery, ...')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareDish('Puran Poli')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+            <div class="col-md-3">
+                <img src="puranpoli.jpg" alt="Puran Poli">
+                <h5>Puran Poli</h5>
+            </div>
+        </div>
+        <hr>
+            <!-- Modak -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="modak.jpg" alt="Modak">
+                        <h5>Modak</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <p><strong>Ingredients:</strong> Rice flour, jaggery, grated coconut, cardamom powder, ghee, water.</p>
+                        <p><strong>Procedure:</strong>
+                            <ol>
+                                <li>Prepare dough using rice flour, water, and ghee.</li>
+                                <li>Make stuffing by cooking grated coconut with jaggery and cardamom powder.</li>
+                                <li>Shape dough into small cups, fill with stuffing, and seal to form modaks.</li>
+                                <li>Steam modaks in a steamer for 10-12 minutes.</li>
+                            </ol>
+                            <a href="https://youtu.be/d72SB01BWtA" class="btn btn-danger btn-sm"><i class="fas fa-video"></i> Watch On YouTube</a>
+                        </p>
+        
+                           
+                <!-- Like, Comment, Download, Share Buttons -->
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('Puran Poli', 'Ingredients: Chana dal, jaggery, ...')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareDish('Puran Poli')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+                    </div>
+                    
+                </div>
+                <hr>
+        
+                <!-- Misal Pav -->
+                <div class="row">
+                   
+                    <div class="col-md-8">
+                        <p><strong>Ingredients:</strong> Sprouted moth beans, onions, tomatoes, ginger-garlic paste, spices, tamarind pulp, farsan, pav.</p>
+                        <p><strong>Procedure:</strong>
+                            <ol>
+                                <li>Cook sprouted moth beans until soft.</li>
+                                <li>Sauté onions and ginger-garlic paste in oil.</li>
+                                <li>Add spices, tamarind pulp, and cooked beans. Simmer for 10 minutes.</li>
+                                <li>Serve hot with farsan and pav.</li>
+                            </ol>
+                            <a href="https://youtu.be/U24aNCL0YdQ" class="btn btn-danger btn-sm"><i class="fas fa-video"></i> Watch On YouTube</a>
+                        </p>
+
+        
+                           
+                <!-- Like, Comment, Download, Share Buttons -->
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('Puran Poli', 'Ingredients: Chana dal, jaggery, ...')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareDish('Puran Poli')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+            <div class="col-md-3">
+                <img src="misal.jpg" alt="Misal Pav">
+                <h5>Misal Pav</h5>
+            </div>
+                    </div>
+                    
+                </div>
+                <hr>
+        
+                <!-- Vada Pav -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="vadapav.jpg" alt="Vada Pav">
+                        <h5>Vada Pav</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <p><strong>Ingredients:</strong> Potatoes, garlic, green chilies, mustard seeds, turmeric, gram flour, pav, oil, salt.</p>
+                        <p><strong>Procedure:</strong>
+                            <ol>
+                                <li>Boil and mash potatoes. Add garlic, green chilies, mustard seeds, turmeric, and salt.</li>
+                                <li>Form potato mixture into balls, dip in gram flour batter, and deep-fry until golden brown.</li>
+                                <li>Serve hot vada in pav with chutneys.</li>
+                            </ol>
+                            <a href="https://youtu.be/r4saZD0J_gU" class="btn btn-danger btn-sm"><i class="fas fa-video"></i> Watch On YouTube</a>
+                        </p>
+        
+                            
+                <!-- Like, Comment, Download, Share Buttons -->
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('Puran Poli', 'Ingredients: Chana dal, jaggery, ...')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareDish('Puran Poli')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+                    </div>
+                </div>
+                <hr>
+        
+                <!-- Bharli Vangi -->
+                <div class="row">
+                    
+                    <div class="col-md-8">
+                        <p><strong>Ingredients:</strong> Baby brinjals, roasted peanuts, grated coconut, sesame seeds, spices, tamarind pulp, oil, salt.</p>
+                        <p><strong>Procedure:</strong>
+                            <ol>
+                                <li>Prepare stuffing using roasted peanuts, coconut, sesame seeds, and spices.</li>
+                                <li>Stuff baby brinjals with the mixture and cook in a pan with oil and tamarind pulp until tender.</li>
+                            </ol>
+                            <a href="https://youtu.be/n1VfxAwSI4o" class="btn btn-danger btn-sm"><i class="fas fa-video"></i> Watch On YouTube</a>
+                        </p>
+            
+                <!-- Like, Comment, Download, Share Buttons -->
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('Puran Poli', 'Ingredients: Chana dal, jaggery, ...')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareDish('Puran Poli')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+            <div class="col-md-3">
+                <img src="bharli.jpg" alt="Bharli Vangi">
+                <h5>Bharli Vangi</h5>
+            </div>
+                    </div>
+                </div>
+                <hr>
+            <!-- bele bisi bath -->
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="bisibele.jpg" alt="Bisi Bele Bath">
+                    <h5>Bisi Bele Bath</h5>
+                </div>
+                <div class="col-md-8">
+                    <p><strong>Ingredients:</strong> Rice, toor dal, vegetables, tamarind pulp, ghee/oil, mustard seeds, asafoetida, curry leaves, dried red chilies, turmeric, salt, water, coriander leaves, cashew nuts (optional).</p>
+                    <p><strong>Procedure:</strong>
+                        <ol>
+                            <li>Prepare Bisi Bele Bath powder.</li>
+                            <li>Cook rice and dal.</li>
+                            <li>Sauté spices and vegetables.</li>
+                            <li>Combine with rice and dal, and simmer. Garnish and serve.</li>
+                        </ol>
+                        <a href="https://youtu.be/VEArdyBWvdw" class="btn btn-danger btn-sm"><i class="fas fa-video"></i> Watch on YouTube</a>
+                    </p>
+            
+                    <!-- Like, Comment, Download, Share Buttons -->
+                      
+                <!-- Like, Comment, Download, Share Buttons -->
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('Puran Poli', 'Ingredients: Chana dal, jaggery, ...')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareDish('Puran Poli')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+                </div>
+            </div>
+            <hr>
+           
+                <!-- Hyderabadi Biryani -->
+                <div class="row">
+                    
+                    <div class="col-md-8">
+                        <p><strong>Ingredients:</strong> Chicken/mutton, yogurt, ginger-garlic paste, green chilies, turmeric, red chili powder, garam masala, coriander powder, cumin powder, lemon juice, salt, saffron milk.</p>
+                        <p><strong>Procedure:</strong>
+                            <ol>
+                                <li>Marinate the meat with yogurt, spices, and herbs for at least 2-3 hours.</li>
+                                <li>Cook basmati rice with whole spices and salt until 70% done.</li>
+                                <li>Layer the marinated meat and rice in a pot, add saffron milk, fried onions, and herbs.</li>
+                                <li>Seal the pot and cook on low heat for 20-30 minutes.</li>
+                                <li>Gently mix and serve hot with raita or salad.</li>
+                            </ol>
+                            <a href="https://youtu.be/Z0WeJ9zxB_4" class="btn btn-danger btn-sm"><i class="fas fa-video"></i> Watch On YouTube</a>
+                        </p>
+        
+                            
+                <!-- Like, Comment, Download, Share Buttons -->
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('Puran Poli', 'Ingredients: Chana dal, jaggery, ...')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareDish('Puran Poli')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+            <div class="col-md-3">
+                <img src="biryani.jpg" alt="Hyderabadi Biryani">
+                <h5>Hyderabadi Biryani</h5>
+            </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- idli sambhar -->
+                <div class="row">
+                    <div class="col-md-3">
+                    <img src="idlis.jpg"><h5>Idli Sambhar</h5></div>
+                    <div class="col-8">
+                    <p><strong>Ingredients for Idli:</strong> Urad dal, rice, fenugreek seeds, salt, water</p>
+                    <p><strong>Procedure:</strong> <ol><li>Soak rice and urad dal separately with fenugreek seeds in rice.</li><li>Grind dal and rice, mix, and ferment overnight.</li><li>Pour batter into molds and steam for 10-12 minutes.</li></ol></p></div>
+                <div>    
+                        <p><strong>Ingredients for Sambhar:</strong>Toor dal, turmeric, salt, oil, mustard seeds, cumin seeds, asafoetida, curry leaves, dried red chilies, onion, tomato, carrot, drumstick, tamarind pulp, sambhar powder, coriander leaves</p>
+                        <p><strong>Procedure:</strong> <ol><li>Cook dal with turmeric and salt;mash.</li><li>Sauté spices and onions, add tomatoes, carrots, drumstick.</li><li>Add tamarind pulp, sambhar powder, salt; cook until vegetables are tender.</li><li>Combine with mashed dal, adjust consistency, and simmer.</li><li>Garnish with coriander leaves.</li></ol>
+                            <!-- <a href=https://www.youtube.com/watch?v=yywahz7gzr0&pp=ygUiaWRsaSBzYW1iYXIgcmVjaXBlIG1hZGh1cmEgbWFyYXRoaQ%3D%3D>Watch on Youtube</a> -->
+                            <a href="https://www.youtube.com/watch?v=yywahz7gzr0&pp=ygUiaWRsaSBzYW1iYXIgcmVjaXBlIG1hZGh1cmEgbWFyYXRoaQ%3D%3D" class="btn btn-danger btn-sm"><i class="fas fa-video"></i> Watch On YouTube</a>
+
+                        </p>
+                        <!-- Like, Comment, Download, Share Buttons -->
+                <div>
+                    <button class="icon-button" onclick="increaseLike('like1')">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <span id="like1">0</span>
+                    <button class="icon-button" onclick="toggleCommentOptions('comment-options1')">
+                        <i class="fas fa-comment-alt"></i>
+                    </button>
+                    <button class="icon-button" onclick="downloadRecipe('Puran Poli', 'Ingredients: Chana dal, jaggery, ...')">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-button" onclick="shareDish('Puran Poli')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="comment-options1" class="comment-options">
+                    <button class="btn btn-secondary btn-sm" onclick="toggleCommentSection('comment-section1')">
+                        Add Comment
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleComments('comments1')">
+                        Show Comments
+                    </button>
+                </div>
+                <div id="comment-section1" class="comment-section">
+                    <textarea class="form-control" id="comment1" placeholder="Add a comment..."></textarea>
+                    <button class="btn btn-primary btn-sm" onclick="addComment('comment1', 'comments1')">
+                        Submit
+                    </button>
+                </div>
+                <div id="comments1"></div>
+            </div>
+                    </div>
+                   
+                   
+                </div>
+               
+                <hr>
+            </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function increaseLike(likeId) {
+            const likeElement = document.getElementById(likeId);
+            let likeCount = parseInt(likeElement.innerText);
+            likeElement.innerText = likeCount + 1;
+        }
+
+        function toggleCommentOptions(optionsId) {
+            const options = document.getElementById(optionsId);
+            options.style.display = options.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleCommentSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleComments(commentsId) {
+            const comments = document.getElementById(commentsId);
+            comments.style.display = comments.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function addComment(commentId, commentsContainerId) {
+            const commentText = document.getElementById(commentId).value;
+            if (commentText.trim() === "") return;
+
+            const commentsContainer = document.getElementById(commentsContainerId);
+            const newComment = document.createElement('p');
+            newComment.textContent = commentText;
+            commentsContainer.appendChild(newComment);
+
+            document.getElementById(commentId).value = "";
+        }
+
+        function downloadRecipe(title, content) {
+            let recipeText = title + "\n\n" + content;
+            let blob = new Blob([recipeText], { type: 'text/plain' });
+            let link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = title + ".txt";
+            link.click();
+        }
+
+        function shareDish(dish) {
+            alert("Share " + dish + " on social media!");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Recipes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+    body {
+        background-color: black;
+        color: white;
+    }
+    
+    /* Ensure all cards have a smaller size */
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        height: auto; /* Adjust card height */
+        display: flex;
+        flex-direction: column;
+        padding: 10px; /* Reduce padding inside the card */
+    }
+    
+    /* Ensure all images inside the card are smaller */
+    .card-img-top {
+        width: 100%;        /* Stretch image to fit the card width */
+        height: 150px;      /* Smaller fixed height for all images */
+        object-fit: cover;  /* Ensures the image fits properly without stretching */
+        object-position: center; /* Centers the image */
+    }
+    
+    /* Make sure the card body expands properly */
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 10px;  /* Reduce padding inside the card body */
+    }
+    
+    /* Ensure the "Watch on YouTube" button sticks to the bottom */
+    .btn-danger {
+        margin-top: auto;
+        background-color: #fc0101;
+        padding: 0.5rem 1rem; /* Adjust button padding */
+    }
+    
+    .like-btn, .comment-btn, .share-btn, .download-btn {
+        margin-top: 10px;
+        width: auto; /* Adjust width */
+    }
+    
+    .comment-section {
+        background: #fff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 10px; /* Optional: Adjust spacing between buttons */
+    }
+    
+    .btn-outline-primary,
+    .btn-outline-secondary,
+    .btn-outline-success,
+    .btn-outline-dark {
+        border: none; /* Remove border */
+        background-color: transparent; /* Set background to transparent */
+        box-shadow: none; /* Remove box shadow */
+    }
+    
+    .list-group-item {
+        border: none;
+        background: #f1f1f1;
+        margin-top: 5px;
+        padding: 8px 10px;
+        border-radius: 5px;
+    }
+</style>    
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Discover Top Recipes</h2>
+
+        <div class="row" id="recipe-container">
+            <!-- Recipes will be loaded dynamically here -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
